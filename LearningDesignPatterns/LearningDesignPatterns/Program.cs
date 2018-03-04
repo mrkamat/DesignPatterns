@@ -10,6 +10,15 @@ namespace LearningDesignPatterns
     {
         static void Main(string[] args)
         {
+            StrategyPattern.MallardDuck myMallardDuck = new StrategyPattern.MallardDuck();
+            myMallardDuck.display();
+            myMallardDuck.performFly();
+
+            StrategyPattern.RubberDuck myRubberDuck = new StrategyPattern.RubberDuck();
+            myRubberDuck.display();
+            myRubberDuck.performFly();
+
+            Console.ReadLine();
         }
     }
 }
