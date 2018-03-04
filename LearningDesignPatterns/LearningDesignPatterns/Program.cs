@@ -10,6 +10,7 @@ namespace LearningDesignPatterns
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Lets try strategy pattern");
             StrategyPattern.MallardDuck myMallardDuck = new StrategyPattern.MallardDuck();
             myMallardDuck.display();
             myMallardDuck.performFly();
