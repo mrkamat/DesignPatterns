@@ -15,8 +15,10 @@ namespace LearningDesignPatterns.StrategyPattern
         // This may be shared with some subclasses but not all will definitely be different
         // public abstract void fly();
         // so here we are now using an Interface instead to define how we will fly.
+        // This is the strategy part of the strategy pattern.
         public IFlyBehavior flyBehavior;
 
+        //This function can be called by the classes and the fly algorithm is encapsulated as depending on the behavior.
         public void performFly()
         {
             flyBehavior.fly();
