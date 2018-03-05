@@ -10,7 +10,33 @@ namespace LearningDesignPatterns
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Lets try strategy pattern");
+            Console.WriteLine("Please choose the pattern you want to run.");
+            Console.WriteLine("1. StrategyPattern \n2. Observer Pattern");
+            int choice = Console.Read() - 48;
+            switch (choice)
+            {
+                case 1:
+                    TestStrategyPattern();
+                    break;
+                case 2:
+                    TestObserverPattern();
+                    break;
+                default:
+                    break;
+            }
+            Console.ReadKey();
+        }
+
+        private static void TestObserverPattern()
+        {
+            Console.WriteLine("\n\nLets try observer pattern");
+            ObserverPattern.WeatherData wd = new ObserverPattern.WeatherData();
+            wd.TestWeatherData();
+        }
+
+        static void TestStrategyPattern()
+        {
+            Console.WriteLine("\n\nLets try strategy pattern");
             StrategyPattern.MallardDuck myMallardDuck = new StrategyPattern.MallardDuck();
             myMallardDuck.display();
             myMallardDuck.performFly();
@@ -18,8 +44,6 @@ namespace LearningDesignPatterns
             StrategyPattern.RubberDuck myRubberDuck = new StrategyPattern.RubberDuck();
             myRubberDuck.display();
             myRubberDuck.performFly();
-
-            Console.ReadLine();
         }
     }
 }
