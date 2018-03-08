@@ -1,3 +1,4 @@
 "#Learning Design Patterns - Using the book Head first Design patterns. Also a big thanks to Christopher Okhravi and his youtube channel : https://www.youtube.com/channel/UCbF-4yQQAWw-UnuCd2Azfzg"
 "#Now we have strategy pattern added : The strategy pattern defines a family of algorithms, encapsulates each one, makes them interchangable. Strategy lets the algorithm vary independently from clients that use it." 
 "#Now we have observer pattern added : The observer pattern defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automaticaly"
+"#Now we have decorator pattern added : The decorator pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality." 
