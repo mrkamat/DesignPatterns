@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DecoratorPattern\CoffeeExample\AddOnDecorator.cs" />
+    <Compile Include="DecoratorPattern\CoffeeExample\Beverage.cs" />
+    <Compile Include="DecoratorPattern\CoffeeExample\Caramel.cs" />
+    <Compile Include="DecoratorPattern\CoffeeExample\Coffee.cs" />
+    <Compile Include="DecoratorPattern\CoffeeExample\Espresso.cs" />
+    <Compile Include="DecoratorPattern\CoffeeExample\Vanilla.cs" />
     <Compile Include="ObserverPattern\GlassDisplay.cs" />
     <Compile Include="ObserverPattern\IObservable.cs" />
     <Compile Include="ObserverPattern\IObserver.cs" />

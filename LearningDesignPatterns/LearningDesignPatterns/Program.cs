@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningDesignPatterns.DecoratorPattern.CoffeeExample;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,21 +11,42 @@ namespace LearningDesignPatterns
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please choose the pattern you want to run.");
-            Console.WriteLine("1. StrategyPattern \n2. Observer Pattern");
-            int choice = Console.Read() - 48;
-            switch (choice)
+            int i = 0;
+            do
             {
-                case 1:
-                    TestStrategyPattern();
-                    break;
-                case 2:
-                    TestObserverPattern();
-                    break;
-                default:
-                    break;
-            }
-            Console.ReadKey();
+                Console.WriteLine("Please choose the pattern you want to run.");
+                Console.WriteLine("1. Strategy Pattern \n2. Observer Pattern");
+                Console.WriteLine("3. Decorator Pattern\n-1. Exit");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case -1:
+                        return;
+                    case 1:
+                        TestStrategyPattern();
+                        break;
+                    case 2:
+                        TestObserverPattern();
+                        break;
+                    case 3:
+                        TestDecoratorPattern();
+                        break;
+                    default:
+                        break;
+                }
+            } while (true);
+        }
+
+        private static void TestDecoratorPattern()
+        {
+            Beverage coffee = new Coffee();
+            Console.WriteLine("{0}....{1}", coffee.getDescription(), coffee.getCost());
+
+            Beverage vanillaCoffee = new Vanilla(new Coffee());
+            Console.WriteLine("{0}....{1}", vanillaCoffee.getDescription(), vanillaCoffee.getCost());
+
+            Beverage CaramelVanillaCoffee = new Caramel(new Vanilla(new Coffee()));
+            Console.WriteLine("{0}....{1}", CaramelVanillaCoffee.getDescription(), CaramelVanillaCoffee.getCost());
         }
 
         private static void TestObserverPattern()
